@@ -13,13 +13,16 @@
         <section class="contacto">
             <div class="contenedor">
                 <h3 class="titulo">Bienvenido a Pizzas Castillo</h3>
-            <form class="formulario" action="">
-                <input type="text" placeholder="Nombre o Correo" name="nombre" required>
-                <input type="password" placeholder="Contraseña" name="contraseña" required>
+            <form id="frmLogin" class="formulario">
+                <input type="text" placeholder="Correo electronico" name="email" required>
+                <input type="password" placeholder="Contraseña" name="pass" required>
                 <p>Si no tienes una cuenta <a href="registro.html">Registrate aqui</a></p>
+                <p id="log" >
+                </p>
                 <input class="boton" type="submit" value=" Ingresar">
             </form>
         </div>
         </section>
+        <script src="loginUsuario.js"></script>
     </body>
 </html>
