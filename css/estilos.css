@@ -112,7 +112,7 @@ text-align: center;
   line-height: 34px;
   margin-bottom: 40px;
   font-weight: 400;
-  color: #dd820d;
+  color: #fa142f;
   text-align: center;
 }
 
@@ -167,7 +167,7 @@ text-align: center;
   text-align: center;
 }
 
-.main .contenedor .contenedor-trabajos .trabajo .descripcion .nombre{
+.main .contenedor .contenedor-trabajos .trabajo .descripcion{
   font-weight: bold;
   color: #3895ea;
   margin-bottom: 10px;
@@ -179,7 +179,7 @@ text-align: center;
 text-decoration: none;
 }
 
-.main .contenedor .contenedor-trabajos .trabajo .descripcion .categoria{
+.main .contenedor .contenedor-trabajos .trabajo .descripcion {
   font-size: 14px;
   color: #161515;
 }
@@ -318,3 +318,30 @@ footer .redes-sociales .instagram:hover{background: #e1306c;}
   }
 }
 
+div.texto > p {
+  color: white;
+}
+
+#menu{
+  color: #fa142f;
+}
+
+a.linkPizza {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: rgb(207, 105, 80);
+}
+
+p.categoria {
+  color:#DAAA70;
+}
+
+div.trabajo {
+  cursor: pointer;
+}
+
+div.trabajo:hover {
+  background-color: #fa142f2f;
+  border: solid 1px white;
+  transition: ease-in border 0.2s;
+}
