@@ -1,0 +1,228 @@
+*{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Quicksand', Arial;
+  background:  #ecf5c5 ; 
+  font-size: 16px;
+}
+
+.contenedor{
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+/* HEADER */
+header{
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .contenedor .logo img{
+   border-radius: 4px;
+ }
+
+header .menu{
+  margin: 20px 0;
+  text-align: right;
+}
+
+
+header .menu a{
+  margin: 0 20px;
+  color: #fff;
+  padding-bottom: 9px;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  font-size: 1em;
+  }
+
+  header .menu a{
+    color: #273746;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 18px;
+  }
+  
+  header .menu a:hover{
+    text-decoration: underline;
+  }
+
+
+/*MAIN*/
+.main .contenedor {
+overflow: visible;
+}
+
+.main .acerca-de {
+text-align: center;
+}
+
+.main .acerca-de .foto {
+margin-top: -60px;
+}
+
+.main .acerca-de .foto img {
+vertical-align: top;
+border-radius: 50%;
+border: 5px solid rgba(255,255,255,0.2);
+}
+
+.main .acerca-de .texto {
+color: #5a5a5a;
+font-weight: 600;
+font-size: 1em;
+line-height: 30px;
+width: 80%;
+margin: 40px auto 60px auto;
+}
+
+.main .acerca-de .texto .titulo {
+font-size: 34px;
+line-height: 34px;
+margin-bottom: 40px;
+font-weight: 300;
+color: #dd820d;
+text-align: center;
+}
+
+.main .acerca-de .texto .bold {
+color: #3895ea;
+text-decoration: underline;
+}
+
+.main .trabajos {
+background: #f2f2f2;
+padding: 60px 0;
+}
+
+.main .trabajos .contenedor {
+overflow: hidden;
+}
+
+.main .trabajos .titulo {
+font-size: 34px;
+line-height: 34px;
+margin-bottom: 40px;
+font-weight: 300;
+color: #323068;
+text-align: center;
+}
+
+.main .trabajos .contenedor-trabajos {
+display: flex;
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo{
+width: 23%;
+margin-bottom: 40px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb {
+width: 100%;
+margin-bottom: 10px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb img {
+width: 100%;
+vertical-align: top;
+border-radius: 3px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion {
+text-align: center;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
+font-weight: 700;
+color: #3895ea;
+margin-bottom: 10px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
+font-size: 14px;
+color:#636363;
+}
+
+  /*FOOTER*/
+  footer .redes-sociales{
+    background: #1e2b38;
+    padding: 60px 0;
+  }
+  
+  footer .redes-sociales .contenedor{
+    display: flex;
+    justify-content:center;
+  }
+  
+  footer .redes-sociales a{
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+    border-radius: 3px;
+    font-size: 30px;
+    margin: 0 20px;
+  }
+  
+  footer .redes-sociales  p{
+    text-align: center;
+    color: #fff;
+  }
+  
+  footer .redes-sociales  p:hover{
+    /*background:  #808b96;*/
+    border-radius: 3px;
+    padding: 15px 5px; 
+  }
+  
+  footer .redes-sociales  p .bold{
+    text-decoration: underline;
+  }
+  
+  footer .redes-sociales .twitter:hover{background: #1da1f2;}
+  footer .redes-sociales .facebook:hover{background: #3b5998;}
+  footer .redes-sociales .youtube:hover{background: #ea4335;}
+  footer .redes-sociales .github:hover{background: #6e5494;}
+  footer .redes-sociales .instagram:hover{background: #e1306c;}
+  
+  
+  /*MEDIA QUERIS*/
+  
+  @media screen and (max-width: 800px) {
+    header .menu{
+      text-align: center;
+    }
+    .main .trabajos .contenedor-trabajos .trabajo{
+      width: 46%;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    header .contenedor-texto .texto .nombre{
+      font-size: 35px;
+    }
+    header .contenedor-texto .texto .profesion{
+      font-size: 16px;
+    }
+    footer .redes-sociales .contenedor{
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+  }
+
+  

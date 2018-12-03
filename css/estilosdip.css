@@ -1,0 +1,45 @@
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body{
+    background: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+  }
+  
+  .contenedor2{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  /* HEADER */
+  header{
+    background: url('../img/bg1.jpg') #49a3d6;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 600px;
+  }
+
+  header .menu{
+    margin: 20px 0;
+    text-align: right;
+  }
+
+    header .menu-dip a{ 
+    margin: 0 20px;
+    color: #fff;
+    padding-bottom: 9px;        
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1em;
+    }
+        
+    header .menu-dip a:hover{
+    border-bottom: 2px solid #fff;
+        }
