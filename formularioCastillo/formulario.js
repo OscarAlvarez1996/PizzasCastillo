@@ -79,6 +79,7 @@
             if ( error.innerHTML == "" ){
 
                 var params = {
+                    mode: 'cors',
                     body: new FormData(formulario),
                     method: "POST"
                 }
