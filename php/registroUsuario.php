@@ -4,13 +4,18 @@
     $user = "root";
     $pass = "";
 
-    echo var_dump($_GET["nombre"]);
+    $response = "";
     
-    /*
-    $usuario = $_GET["usuario"];
-    $pass = $_GET["pass"];
+    $nombre = $_POST["nombre"];
+    $apellidos = $_POST["apellido"];
+    $correo = $_POST["correo"];
+    $contra = $_POST["contrasena"];
 
-    if ( isset($usuario) && isset($pass)){
+    if ( isset($nombre) 
+        && isset($apellidos)
+        && isset($correo)
+        && isset($contra)
+        ){
 
         $mysqli = mysqli_connect($host, $user, $pass, $db);
 
@@ -21,20 +26,16 @@
             exit;
         }
 
-        $nombre = "";
-        $apellidos = "";
-        $correo = "";
-        $contra = "";
-
         $query = "insert into usuario ( nombre , apellidos , correo , contrasena ) " .
-            "values ('".$nombre."' , '".$apellidos."' , '".$coreo."' , '".$contra."')";
+            "values ('".$nombre."' , '".$apellidos."' , '".$correo."' , '".$contra."')";
 
-        echo $query;
-
-        $mysqli->query($query);
+        $result = $mysqli->query($query);
         $mysqli->close();
-    } else {
 
+        $response = [ "status" => $result ];
+    } else {
+        $response = [ "status" => false ];
     }
-    */
+
+    echo json_encode($response);
 ?>

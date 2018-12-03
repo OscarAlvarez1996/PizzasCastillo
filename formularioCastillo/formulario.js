@@ -1,10 +1,28 @@
 (function (){
+        
+    
         formulario = document.getElementById('formulario')
         nombre = formulario.nombre,
         apellido = formulario.apellido,
         correo = formulario.correo,
         contrasena = formulario.contrasena,
         error = document.getElementById('error');
+
+        urlLogin = "formulario";
+
+        function usuarioRegistrado(){
+            error.style.display='block';
+            error.style.backgroundColor = "green"
+            error.innerHTML = '<li>Usuario Registrado</li>';
+            setTimeout(() => {
+                window.location = urlLogin;
+            }, 1000);
+        }
+
+        function usuarioNoRegistrado(){
+            error.style.display='block';
+            error.innerHTML = '<li>Usuario ya registrado</li>';
+        }
 
         function validarNombre ( ){
             if(nombre.value == '' || nombre.value == null ){
@@ -51,6 +69,7 @@
         function validarFormulario(e){
             e.preventDefault();
             error.innerHTML= '';
+            error.style.backgroundColor = "#e84d43";
 
             validarNombre();
             validarApellido();
@@ -58,12 +77,10 @@
             validarContrasena();
 
             if ( error.innerHTML == "" ){
-                
-                console.log(formulario);
 
                 var params = {
-                    method: "POST",
-                    body: formulario
+                    body: new FormData(formulario),
+                    method: "POST"
                 }
 
                 fetch('http://127.0.0.1/PizzasCastillo/php/registroUsuario.php' , params )
@@ -71,7 +88,12 @@
                         return response.json();
                     })
                     .then(function(data) {
-                        console.log(data);
+                        error.innerHTML = "";
+                        if ( data.status ){
+                            usuarioRegistrado();
+                        } else {
+                            usuarioNoRegistrado();
+                        }
                     });
             }
           
