@@ -8,3 +8,5 @@ create table usuario(
   correo varchar (50) not null,
   contrasena varchar (50) not null
 );
+
+ALTER TABLE usuario ADD CONSTRAINT email_uk UNIQUE (correo);
